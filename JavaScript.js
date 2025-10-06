@@ -1,4 +1,4 @@
-<script type="module">
+<script>
   // ===== Import Firebase SDKs =====
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
   import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
@@ -88,3 +88,4 @@
     });
   }
 </script>
+
