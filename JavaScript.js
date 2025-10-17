@@ -1,51 +1,40 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
-    const menuList = document.getElementById("menu-list");
-    const addForm = document.getElementById("addForm");
-    const searchInput = document.getElementById("search");
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("search");
+  const buttons = document.querySelectorAll(".buttons button");
+  const dishCards = document.querySelectorAll(".dish-card");
 
-    // Load existing dishes
-    let dishes = JSON.parse(localStorage.getItem("dishes")) || [];
-
-    // Display dishes
-    function displayDishes(list = dishes) {
-        if (!menuList) return;
-        menuList.innerHTML = "";
-        list.forEach(dish => {
-            const div = document.createElement("div");
-            div.classList.add("dish");
-            div.innerHTML = `
-        <h3>${dish.name}</h3>
-        <p><b>Price:</b> ${dish.price} EGP</p>
-        <p><b>Ingredients:</b> ${dish.ingredients}</p>
-        <p><b>Category:</b> ${dish.category}</p>
-      `;
-            menuList.appendChild(div);
-        });
-    }
-
-    displayDishes();
-
-    // Category filtering
-    document.querySelectorAll(".buttons button")?.forEach(btn => {
-        btn.addEventListener("click", () => {
-            document.querySelectorAll(".buttons button").forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-
-            const category = btn.getAttribute("data-category");
-            if (category === "all") {
-                displayDishes();
-            } else {
-                displayDishes(dishes.filter(d => d.category === category));
-            }
-        });
+  // 🔍 Search functionality
+  if (searchInput) {
+    searchInput.addEventListener("input", e => {
+      const searchTerm = e.target.value.toLowerCase();
+      dishCards.forEach(card => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        if (name.includes(searchTerm)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
     });
+  }
 
-    // Search
-    if (searchInput) {
-        searchInput.addEventListener("input", e => {
-            const searchTerm = e.target.value.toLowerCase();
-            const filtered = dishes.filter(d => d.name.toLowerCase().includes(searchTerm));
-            displayDishes(filtered);
-        });
-    }
+  // 🍽️ Category filtering
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Remove active class from all buttons
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
 
+      const category = btn.getAttribute("data-category");
+
+      dishCards.forEach(card => {
+        const cardCategory = card.getAttribute("data-category");
+        if (category === "all" || cardCategory === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+});
