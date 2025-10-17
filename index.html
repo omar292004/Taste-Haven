@@ -1,76 +1,92 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taste Haven</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="StyleSheet.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste Haven</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="StyleSheet.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="brand">
-            <img src="taste haven.jpeg" class="logo">
-            <h1><a href="index.html">Taste Haven</a></h1>
-        </div>
-        <nav>
-            <a href="index.html">Our Menu</a>
-            <a href="About.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
+  <header>
+    <div class="brand">
+      <img src="taste haven.jpeg" class="logo" alt="Taste Haven Logo">
+      <h1><a href="index.html">Taste Haven</a></h1>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Our Menu</a>
+      <a href="About.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
 
-    <main>
-        <div class="menu-controls">
-            <input type="text" id="search" placeholder="Search for a dish...">
-            <div class="buttons">
-                <button data-category="dinner">Dinner</button>
-                <button data-category="desserts">Desserts</button>
-                <button data-category="hot drinks">Hot Drinks</button>
-                <button data-category="cold drinks">Cold Drinks</button>
-                <button data-category="breakfast">Breakfast</button>
-                <button data-category="all" class="active">All</button>
-            </div>
-        </div>
+  <main>
+    <div class="menu-controls">
+      <input type="text" id="search" placeholder="Search for a dish...">
+      <div class="buttons">
+        <button data-category="dinner">Dinner</button>
+        <button data-category="desserts">Desserts</button>
+        <button data-category="hot drinks">Hot Drinks</button>
+        <button data-category="cold drinks">Cold Drinks</button>
+        <button data-category="breakfast">Breakfast</button>
+        <button data-category="all" class="active">All</button>
+      </div>
+    </div>
 
-        <section id="menu-list" class="menu-list">
-           <div class="dish-card" data-category="dinner">
+    <section id="menu-list" class="menu-list">
+      <!-- 🍔 Dinner -->
+      <div class="dish-card" data-category="dinner">
         <h3>Classic Burger</h3>
         <p>Juicy beef patty with lettuce, tomato, and cheese.</p>
-        <span class="price">$25</span>
-    </div>
+        <span class="price">25 EGP</span>
+      </div>
 
-    <div class="dish-card" data-category="dinner">
+      <div class="dish-card" data-category="dinner">
         <h3>Spaghetti Pomodoro</h3>
         <p>Fresh pasta tossed in homemade tomato sauce.</p>
-        <span class="price">$20</span>
-    </div>
+        <span class="price">20 EGP</span>
+      </div>
 
-    <div class="dish-card" data-category="desserts">
+      <!-- 🍰 Desserts -->
+      <div class="dish-card" data-category="desserts">
         <h3>Chocolate Cake</h3>
         <p>Rich and moist chocolate cake with ganache topping.</p>
-        <span class="price">$15</span>
-    </div>
-            
-    <div class="dish-card" data-category="hot drinks">
-        <h3>Coffee</h3>
-        <p>A cup rich with coffee.</p>
-        <span class="price">$10</span>
-    </div>
-        </section>
-    </main>
+        <span class="price">15 EGP</span>
+      </div>
 
-    <footer>
-        <p>© 2025 Taste Haven Restaurant | Developed and Designed by Omar Hossam</p>
-        <div class="social">
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://x.com">X</a>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="JavaScript.js"></script>
+      <!-- ☕ Hot Drinks -->
+      <div class="dish-card" data-category="hot drinks">
+        <h3>Coffee</h3>
+        <p>A rich cup of freshly brewed coffee.</p>
+        <span class="price">10 EGP</span>
+      </div>
+
+      <!-- 🧃 Cold Drinks -->
+      <div class="dish-card" data-category="cold drinks">
+        <h3>Fresh Orange Juice</h3>
+        <p>Freshly squeezed orange juice served chilled.</p>
+        <span class="price">12 EGP</span>
+      </div>
+
+      <!-- 🍳 Breakfast -->
+      <div class="dish-card" data-category="breakfast">
+        <h3>French Toast</h3>
+        <p>Golden brown toast served with syrup and fruits.</p>
+        <span class="price">18 EGP</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Taste Haven Restaurant | Developed and Designed by Omar Hossam</p>
+    <div class="social">
+      <a href="https://facebook.com">Facebook</a>
+      <a href="https://instagram.com">Instagram</a>
+      <a href="https://x.com">X</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JavaScript.js"></script>
 </body>
 </html>
-
-
