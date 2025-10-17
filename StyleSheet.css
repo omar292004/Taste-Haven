@@ -123,34 +123,6 @@ footer {
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-/* Add form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    margin: auto;
-}
-
-input, textarea, select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background: #1e1e2f;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-    button:hover {
-        background: #333;
-    }
 
 /* Responsive Design */
 
@@ -223,34 +195,7 @@ button {
         width: 100%;
     }
 }
-#login-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 30px;
-}
 
-    #login-section input {
-        padding: 10px;
-        width: 250px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-
-    #login-section button {
-        background: #1e1e2f;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-        #login-section button:hover {
-            background: #333;
-        }
 /* ===== Make footer stay at the bottom ===== */
 html, body {
     height: 100%;
@@ -274,3 +219,4 @@ footer {
     padding: 15px;
     margin-top: auto; /* ensures footer stays at bottom */
 }
+
