@@ -30,6 +30,7 @@ header {
         text-decoration: none;
         margin: 0 10px;
         transition: 0.3s;
+        cursor:none;
     }
 /* Main sections */
 main {
@@ -214,5 +215,6 @@ footer {
     padding: 15px;
     margin-top: auto; /* ensures footer stays at bottom */
 }
+
 
 
